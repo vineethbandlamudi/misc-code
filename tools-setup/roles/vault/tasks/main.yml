@@ -1,0 +1,20 @@
+- name: Download Repo File
+  ansible.builtin.get_url:
+    url: https://rpm.releases.hashicorp.com/RHEL/hashicorp.repo
+    dest: /etc/yum.repos.d/hashicorp.repo
+
+- name: Install Vault
+  ansible.builtin.dnf:
+    name: vault
+    state: present
+
+- name: Copy Vault config
+  ansible.builtin.copy:
+    src: vault.hcl
+    dest: /etc/vault.d/vault.hcl
+
+- name: Start Vault
+  ansible.builtin.systemd_setup:
+    name: vault
+    state: started
+    enabled: true
