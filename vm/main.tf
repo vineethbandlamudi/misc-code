@@ -44,7 +44,7 @@ resource "azurerm_linux_virtual_machine" "vm" {
     storage_account_type  = "Standard_LRS"
   }
 
-  priority = spot
+  priority = "spot"
   eviction_policy = "Deallocate"
   max_bid_price = -1
 
