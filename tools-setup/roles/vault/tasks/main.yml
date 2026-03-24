@@ -14,7 +14,7 @@
     dest: /etc/vault.d/vault.hcl
 
 - name: Start Vault
-  ansible.builtin.systemd_setup:
+  ansible.builtin.systemd:
     name: vault
     state: started
     enabled: yes
