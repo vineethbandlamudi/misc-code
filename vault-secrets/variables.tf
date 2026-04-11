@@ -16,7 +16,7 @@ variable "values" {
     cart = {
       secret = "roboshop-dev"
       value = {
-        REDIS_HOST     = "redis-dev.rdevopsb84.online"
+        REDIS_HOST     = "redis-dev.vdevops.io"
         CATALOGUE_HOST = "catalogue"
         CATALOGUE_PORT = 8080
       }
@@ -26,10 +26,10 @@ variable "values" {
       secret = "roboshop-dev"
       value = {
         MONGO       = "true"
-        MONGO_URL   = "mongodb://mongodb-dev.rdevopsb84.online:27017/catalogue"
+        MONGO_URL   = "mongodb://mongodb-dev.vdevops.io:27017/catalogue"
         DB_TYPE     = "mongo"
         APP_GIT_URL = "https://github.com/roboshop-devops-project-v3/catalogue"
-        DB_HOST     = "mongodb-dev.rdevopsb84.online"
+        DB_HOST     = "mongodb-dev.vdevops.io"
       }
     }
 
@@ -37,8 +37,8 @@ variable "values" {
       secret = "roboshop-dev"
       value = {
         MONGO     = "true"
-        REDIS_URL = "redis://redis-dev.rdevopsb84.online:6379"
-        MONGO_URL = "mongodb://mongodb-dev.rdevopsb84.online:27017/users"
+        REDIS_URL = "redis://redis-dev.vdevops.io:6379"
+        MONGO_URL = "mongodb://mongodb-dev.vdevops.io:27017/users"
       }
     }
 
@@ -46,7 +46,7 @@ variable "values" {
       secret = "roboshop-dev"
       value = {
         CART_ENDPOINT = "cart:8080"
-        DB_HOST       = "mysql-dev.rdevopsb84.online"
+        DB_HOST       = "mysql-dev.vdevops.io"
         DB_USER       = "root"
         DB_PASS       = "RoboShop@1"
         username      = "root"
@@ -63,7 +63,7 @@ variable "values" {
         CART_PORT = "8080"
         USER_HOST = "user"
         USER_PORT = "8080"
-        AMQP_HOST = "rabbitmq-dev.rdevopsb84.online"
+        AMQP_HOST = "rabbitmq-dev.vdevops.io"
         AMQP_USER = "roboshop"
         AMQP_PASS = "roboshop123"
       }
@@ -72,11 +72,11 @@ variable "values" {
     frontend = {
       secret = "roboshop-dev"
       value = {
-        catalogue_url  = "http://catalogue-dev.rdevopsb84.online:8080/"
-        user_url       = "http://user-dev.rdevopsb84.online:8080/"
-        cart_url       = "http://cart-dev.rdevopsb84.online:8080/"
-        payment_url    = "http://payment-dev.rdevopsb84.online:8080/"
-        shipping_url   = "http://shipping-dev.rdevopsb84.online:8080/"
+        catalogue_url  = "http://catalogue-dev.vdevops.io:8080/"
+        user_url       = "http://user-dev.vdevops.io:8080/"
+        cart_url       = "http://cart-dev.vdevops.io:8080/"
+        payment_url    = "http://payment-dev.vdevops.io:8080/"
+        shipping_url   = "http://shipping-dev.vdevops.io:8080/"
         CATALOGUE_HOST = "catalogue"
         CATALOGUE_PORT = 8080
         USER_HOST      = "user"
